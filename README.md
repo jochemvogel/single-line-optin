@@ -4,5 +4,4 @@ A single line opt-in to add i.e. in your footer to let visitors subscribe to you
 
 
 ## Screenshot
-<img src="https://i.ibb.co/qjd1RqF/Screenshot-2020-04-13-at-11-34-48.png" height=300>
-<img src="https://media.giphy.com/media/Y4bKLe0KWFXZVitfuj/giphy.gif" height=300>
+<img src="https://s4.gifyu.com/images/Hnet-image8c98f78c9e8dde50.gif" height=300>

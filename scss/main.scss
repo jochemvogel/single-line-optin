@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Mali|Inter');
+
+$color-primary: hsl(345, 56%, 53%);
+$color-secondary: lighten($color-primary, 20%);
+$color-light: hsl(0, 0%, 62%);
+$color-error: hsl(358, 100%, 57%);
+
+$progress-height: 10px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color-primary;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h1.logo {
+    color: #fff;
+    font-family: 'Mali', cursive;
+    font-size: 3em;
+}
+
+h1.end {
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    transition: .8s ease-in-out;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.close {
+    .next-btn,
+    .prev-btn {
+        color: #fff;
+    }
+}
+
+.error {
+    .input-group__progress {
+      border-color: $color-error;
+    }
+  
+    .next-btn {
+      color: $color-error;
+    }
+}
+
+.form-box {
+    background: #fff;
+    position: relative;
+    width: 600px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 16px 24px 2px hsla(0, 0%, 0%, 0.1),
+    0 6px 10px 5px hsla(0, 0%, 0%, 0.1), 0 8px 10px -5px hsla(0, 0%, 0%, 0.2);
+    transition: transform 0.1s ease-in-out;
+}
+
+.form-box.close {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+    box-shadow: 0 16px 24px 2px hsla(0, 0%, 0%, 0);
+}
+
+.input-group {
+    position: relative;
+    padding: 30px 20px 20px 20px;
+    margin: 10px 60px 10px 10px;
+    opacity: 0;
+    transition: opacity .3s easy-in-out;
+
+    input {
+        position: relative;
+        width: 100%;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        outline: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    &__label {
+        color: $color-light;
+        position: absolute;
+        pointer-events: none;
+        top: 32px;
+        left: 20px;
+        font-size: 20px;
+        transition: .1s ease-in-out;
+    }
+
+    // Put label on top when user starts typing
+    input:valid + &__label {
+        top: 6px;
+        left: 42px;
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    &__progress {
+        margin-top: 5px;
+        border-bottom: 3px solid $color-primary;
+        width: 0;
+        transition: width .6s ease-in-out;
+    }
+}
+
+.next-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 40px;
+    color: $color-primary;
+    float: right;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:active {
+        transform: scale(.9);
+    }
+
+    &__icon {
+        height: 40px;
+        width: 40px;
+        fill: $color-primary;
+
+        &:hover {
+            fill: $color-secondary;  
+        }
+    }
+}
+
+.prev-btn {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    top: 12px;
+    z-index: 2;
+    color: $color-light;
+    float: right;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:active {
+        transform: scale(.9);
+    }
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        fill: $color-primary;
+        
+        &:hover {
+            fill: $color-secondary;
+        }
+    }
+}
+
+.icon-user {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    top: 12px;
+    z-index: 2;
+    color: $color-light;
+    float: right;
+    border: none;
+    outline: none;
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        fill: $color-primary;
+    }
+}
+
+.progress-bar {
+    position: absolute;
+    background: $color-secondary;
+    height: $progress-height;
+    width: 0;
+    transition: width .5s ease-in-out;
+}
+  
+@media (max-width: 600px) {
+    .form-box {
+        width: 80%;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Single Line Opt-in</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="logo">Single Line Opt-in</h1>
+        <div id="form-box" class="form-box">
+            <button id="prev-btn" class="prev-btn">
+                <svg class="prev-btn__icon">
+                    <use href="img/sprite.svg#icon-chevron-left"></use>
+                </svg>
+            </button>
+            <button id="next-btn" class="next-btn">
+                <svg class="next-btn__icon">
+                    <use id='test' href="img/sprite.svg#icon-chevron-right"></use>
+                </svg>
+            </button>
+
+            <!-- Show icon of a user when you can't go back -->
+            <button id="icon-user" class="icon-user">
+                <svg class="icon-user__icon">
+                    <use href="img/sprite.svg#icon-user"></use>
+                </svg>
+            </button>
+
+            <div id="input-group" class="input-group">
+                <input id="input-group__field" class="input-group__field" required>
+                <label id="input-group__label" class="input-group__label"></label>
+                <div id="input-group__progress" class="input-group__progress"></div>
+            </div>
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

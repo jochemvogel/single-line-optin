@@ -1,0 +1,14 @@
+{
+  "name": "single-line-optin",
+  "version": "1.0.0",
+  "description": "Single line opt-in form",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

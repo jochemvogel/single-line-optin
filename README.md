@@ -4,4 +4,4 @@ A single line opt-in to add i.e. in your footer to let visitors subscribe to you
 
 
 ## Screenshot
-<img src="https://s6.gifyu.com/images/single-line-2.gif" height=300>
+<img src="https://s6.gifyu.com/images/sigle-line-v3.gif" height=300>

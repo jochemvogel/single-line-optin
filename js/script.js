@@ -106,12 +106,12 @@ function formComplete() {
     let email = fields[1].answer;
     console.log(`Name: ${name}\nEmail: ${email}`);
 
-    const h1 = document.createElement('h1');
-    h1.classList.add('end');
-    h1.appendChild(document.createTextNode(`Congratulations ${name}, your gift is on his way to ${email}`));
+    const h2 = document.createElement('h2');
+    h2.classList.add('end');
+    h2.appendChild(document.createTextNode(`Congratulations ${name}, your gift is on his way to ${email}`));
     setTimeout(() => {
-        formBox.parentElement.appendChild(h1);
-        setTimeout(() => h1.style.opacity = 1, 50);
+        formBox.parentElement.appendChild(h2);
+        setTimeout(() => h2.style.opacity = 1, 50);
     }, 1000);
 }
 

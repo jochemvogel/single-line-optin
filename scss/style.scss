@@ -23,8 +23,10 @@ h1.logo {
     font-size: 3em;
 }
 
-h1.end {
+h2.end {
+    font-size: 1.5em;
     position: relative;
+    top: -3em;
     color: #fff;
     opacity: 0;
     transition: .8s ease-in-out;
@@ -41,7 +43,7 @@ h1.end {
 .close {
     .next-btn,
     .prev-btn {
-        color: #fff;
+        display: none;
     }
 }
 
@@ -72,6 +74,24 @@ h1.end {
     overflow: hidden;
     transition: 0.8s ease-in-out;
     box-shadow: 0 16px 24px 2px hsla(0, 0%, 0%, 0);
+}
+
+.icon-user {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    top: 12px;
+    z-index: 2;
+    color: $color-light;
+    float: right;
+    border: none;
+    outline: none;
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        fill: $color-primary;
+    }
 }
 
 .input-group {
@@ -172,23 +192,7 @@ h1.end {
     }
 }
 
-.icon-user {
-    position: absolute;
-    font-size: 18px;
-    left: 20px;
-    top: 12px;
-    z-index: 2;
-    color: $color-light;
-    float: right;
-    border: none;
-    outline: none;
 
-    &__icon {
-        height: 18px;
-        width: 18px;
-        fill: $color-primary;
-    }
-}
 
 .progress-bar {
     position: absolute;
